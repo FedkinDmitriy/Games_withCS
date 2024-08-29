@@ -2,8 +2,9 @@
 
 namespace GuessNumber_CS
 {
-    public delegate int UserInput();
-    public delegate void GetStatus(string message);
+    public delegate int UserInput(); //делегат для вользовательского ввода
+    public delegate void GetStatus(string message); //делегат для вывода сообщений
+
     public class Randomizer
     {
         private UserInput _usr;
@@ -18,6 +19,12 @@ namespace GuessNumber_CS
             _to = to;
             _guessNumber = new Random().Next(_from, _to);
         }
+        /// <summary>
+        /// Регистрация делегатов для использования класса
+        /// </summary>
+        /// <param name="del1"></param>
+        /// <param name="del2"></param>
+        /// <returns></returns>
         public bool RegisterDelegats(UserInput del1, GetStatus del2)
         {
             _usr = del1;
@@ -28,6 +35,9 @@ namespace GuessNumber_CS
             }
             else return false;
         }
+        /// <summary>
+        /// Запуск игры
+        /// </summary>
         public void LetsPlay()
         {
             while (isGuess)
