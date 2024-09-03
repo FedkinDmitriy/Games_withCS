@@ -8,4 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Guess_Lib\Guess_Lib.csproj" />
+  </ItemGroup>
+
 </Project>

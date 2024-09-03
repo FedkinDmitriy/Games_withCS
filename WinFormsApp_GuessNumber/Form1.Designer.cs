@@ -30,8 +30,9 @@
         {
             label1 = new Label();
             groupBox1 = new GroupBox();
-            button1 = new Button();
+            buttonOK = new Button();
             textBox1 = new TextBox();
+            buttonGO = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.ActiveCaption;
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(buttonOK);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Location = new Point(30, 122);
             groupBox1.Name = "groupBox1";
@@ -56,15 +57,15 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             // 
-            // button1
+            // buttonOK
             // 
-            button1.Location = new Point(193, 38);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            buttonOK.Location = new Point(193, 38);
+            buttonOK.Name = "buttonOK";
+            buttonOK.Size = new Size(75, 23);
+            buttonOK.TabIndex = 1;
+            buttonOK.Text = "buttonOK";
+            buttonOK.UseVisualStyleBackColor = true;
+            buttonOK.Click += buttonOK_Click;
             // 
             // textBox1
             // 
@@ -72,12 +73,25 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(136, 23);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.KeyDown += textBox1_KeyDown;
+            // 
+            // buttonGO
+            // 
+            buttonGO.Location = new Point(694, 102);
+            buttonGO.Name = "buttonGO";
+            buttonGO.Size = new Size(75, 23);
+            buttonGO.TabIndex = 2;
+            buttonGO.Text = "buttonGO";
+            buttonGO.UseVisualStyleBackColor = true;
+            buttonGO.Click += buttonGO_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonGO);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Name = "Form1";
@@ -91,7 +105,8 @@
 
         private Label label1;
         private GroupBox groupBox1;
-        private Button button1;
+        private Button buttonOK;
         private TextBox textBox1;
+        private Button buttonGO;
     }
 }
